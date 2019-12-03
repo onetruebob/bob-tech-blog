@@ -1,11 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: `BobOwen.Tech`,
+    author: `Bob Owen`,
+    description: `Secret Projects... Performed in Public`,
+    siteUrl: `https://bobowen.tech/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `theonetruebob`,
+      linkedin: `robertowen`,
+      github: `onetruebob`,
+      microblog: `bobowen`,
     },
   },
   plugins: [
@@ -47,23 +50,17 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
-      },
-    },
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `BobOwen.Tech`,
+        short_name: `BobOwen.Tech`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/profile-pic.jpg`,
       },
     },
     `gatsby-plugin-offline`,

@@ -16,7 +16,7 @@ const Bio = () => {
     query BioQuery {
       avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
         childImageSharp {
-          fixed(width: 50, height: 50) {
+          fixed(width: 57, height: 62) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -26,6 +26,9 @@ const Bio = () => {
           author
           social {
             twitter
+            linkedin
+            github
+            microblog
           }
         }
       }
@@ -47,20 +50,31 @@ const Bio = () => {
           marginRight: rhythm(1 / 2),
           marginBottom: 0,
           minWidth: 50,
-          borderRadius: `100%`,
+          // borderRadius: `100%`,
         }}
-        imgStyle={{
-          borderRadius: `50%`,
-        }}
+        imgStyle={
+          {
+            // borderRadius: `50%`,
+          }
+        }
       />
-      <p>
-        Written by <strong>{author}</strong> who lives and works in San
-        Francisco building useful things.
-        {` `}
-        <a href={`https://twitter.com/${social.twitter}`}>
-          You should follow him on Twitter
-        </a>
-      </p>
+      <div style={{ display: "flex-column" }}>
+        <p>
+          👋 Hi, I'm Bob. I'm a former User Experience designer turned Front-end
+          Software Engineer working{" "}
+          <a href="https://www.pindrop.com">@Pindrop</a> in Atlanta, GA. I love
+          building effective software user interfaces that people enjoy using.
+        </p>
+        <p style={{ marginBottom: 0 }}>
+          You can also find me on{" "}
+          <a href={`https://github.com/${social.github}`}>GitHub</a>,{" "}
+          <a href={`https://www.linkedin.com/in/${social.linkedin}`}>
+            LinkedIn
+          </a>
+          , <a href={`https://${social.microblog}.micro.blog`}>Micro.blog</a>,
+          or <a href={`https://twitter.com/${social.twitter}`}>Twitter</a>
+        </p>
+      </div>
     </div>
   )
 }
