@@ -173,11 +173,10 @@ calculator in the [single file at the root of the project](https://github.com/on
 If you're unfamiliar with Elm, it can look a little foreign and verbose. But
 just like the Cycle JS implementation, it is broken up into three pieces:
 
-- The model that describes the state of the calculators (lines 13 - 22)
+- The model that describes the state of the calculators ([lines 13 - 22](https://github.com/onetruebob/calorie-count-elm/blob/f4ec4d132defac2e8632894aebb2bc70e23ccfef/calorie-calc.elm#L13))
 - The update messages that describe how to change the model when the user or
-  system take action (lines 25 - 71)
-- The view which describes how the dom should look based on the model (lines 74
-  - 102)
+  system take action ([lines 25 - 71](https://github.com/onetruebob/calorie-count-elm/blob/f4ec4d132defac2e8632894aebb2bc70e23ccfef/calorie-calc.elm#L25))
+- The view which describes how the dom should look based on the model ([lines 74 - 102](https://github.com/onetruebob/calorie-count-elm/blob/f4ec4d132defac2e8632894aebb2bc70e23ccfef/calorie-calc.elm#L74))
 
 All of these feed into the Elm runtime which does the magic of tying these three
 pieces together.
