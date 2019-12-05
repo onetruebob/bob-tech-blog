@@ -30,7 +30,9 @@ class BlogIndex extends React.Component {
                     {title}
                   </Link>
                 </h3>
-                <small>{node.frontmatter.date}</small>
+                <small className="post_frontmatter_date">
+                  {node.frontmatter.date}
+                </small>
               </header>
               <section>
                 <p

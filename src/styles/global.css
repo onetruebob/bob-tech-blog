@@ -1,0 +1,22 @@
+body {
+  background-color: #eaeaea;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+figure {
+  border: 1px solid lightgray;
+  background-color: #ffffff;
+}
+
+figcaption {
+  text-align: center;
+  color: #686868;
+}
+.line-numbers-rows {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 1em;
+}
+.post_frontmatter_date {
+  color: #686868;
+}

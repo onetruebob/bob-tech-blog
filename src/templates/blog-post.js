@@ -30,12 +30,14 @@ class BlogPostTemplate extends React.Component {
             </h1>
             <p
               style={{
-                ...scale(-1 / 5),
+                // ...scale(-1 / 5),
                 display: `block`,
                 marginBottom: rhythm(1),
               }}
             >
-              {post.frontmatter.date}
+              <small className="post_frontmatter_date">
+                {post.frontmatter.date}
+              </small>
             </p>
           </header>
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
