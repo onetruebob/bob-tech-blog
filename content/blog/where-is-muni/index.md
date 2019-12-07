@@ -33,8 +33,7 @@ remembers those selections from run to run using local storage.
 Here's my fork:
 https://github.com/onetruebob/firebus/tree/route-selection
 
-Screen capture of WheresMuni in actionYou can play with it yourself here
-(assuming they keep serving the location database):
+~~You can play with it yourself here (assuming they keep serving the location database)~~:
 http://whereismuni.bobowen.org/
 
 **2017 Update:** Firebase is no longer serving the underlying data for this.

@@ -12,7 +12,6 @@ a room with hundreds of others who spoke my language and shared my business
 challenges.
 
 ![San Antonio Riverwalk](./SanAntonioRiverWalk-001.jpg)
-San Antonio Riverwalk
 
 Enterprise UX 2015 [http://enterpriseux.net], was the first such conference I've
 been to that focused squarely on the benefits and challenges of working in the
@@ -44,7 +43,5 @@ Please reach out if you want chat about strategy and/or tactics for any of these
 issues.
 
 ![Enterprise UX Opening Presentation](./EnterpriseUXOpening-002.jpg)
-Enterprise UX Opening Presentation
 
 ![Photo of notes on computer from Enterprise UX](./EnterpriseUXNotes-003.jpg)
-Photo of notes on computer from Enterprise UX
