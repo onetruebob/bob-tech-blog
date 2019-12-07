@@ -50,17 +50,14 @@ const Bio = () => {
           marginRight: rhythm(1 / 2),
           marginBottom: 0,
           minWidth: 50,
-          // borderRadius: `100%`,
         }}
-        imgStyle={
-          {
-            // borderRadius: `50%`,
-          }
-        }
       />
       <div style={{ display: "flex-column" }}>
         <p>
-          👋 Hi, I'm Bob. I'm a former User Experience designer turned Front-end
+          <span role="img" aria-label="waving hand emoji">
+            👋
+          </span>{" "}
+          Hi, I'm Bob. I'm a former User Experience designer turned Front-end
           Software Engineer working{" "}
           <a href="https://www.pindrop.com">@Pindrop</a> in Atlanta, GA. I love
           building effective software user interfaces that people enjoy using.
