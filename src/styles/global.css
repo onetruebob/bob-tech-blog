@@ -1,22 +1,35 @@
 body {
-  background-color: #eaeaea;
-  color: rgba(0, 0, 0, 0.8);
+  background-color: #000010;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 figure {
-  border: 1px solid lightgray;
-  background-color: #ffffff;
+  border: 1px solid #7d7d7d;
+  border-radius: 0.3em;
+  background-color: rgba(255, 255, 255, 0.2);
+  overflow: hidden;
 }
 
 figcaption {
   text-align: center;
-  color: #686868;
+  color: rgba(255, 255, 255, 0.6);
+  border-top: 1px solid #7d7d7d;
+  padding: 0.5em 0;
 }
+
+a {
+  color: rgba(247, 227, 9, 0.8);
+}
+
+blockquote: {
+  color: rgba(255, 255, 255, 0.6);
+}
+
 .line-numbers-rows {
   padding-top: 1em;
   padding-bottom: 1em;
   padding-left: 1em;
 }
 .post_frontmatter_date {
-  color: #686868;
+  color: rgba(255, 255, 255, 0.6);
 }
