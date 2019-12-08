@@ -1,7 +1,8 @@
 body {
-  background-color: #000020;
+  background-color: #000040;
+  background: linear-gradient(to right, #000040 0%, #000010 100%);
   color: rgba(255, 255, 255, 0.8);
-  box-shadow: inset 25px 0px 25px -25px rgba(0, 0, 0, 0.5),
+  box-shadow: inset 25px 0px 25px -25px rgba(194, 41, 149, 0.5),
     inset -25px 0px 25px -25px rgba(0, 0, 0, 0.5);
 }
 
