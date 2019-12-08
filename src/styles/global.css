@@ -1,6 +1,22 @@
 body {
-  background-color: #000040;
-  background: linear-gradient(to right, #000040 0%, #000010 100%);
+  background: #000040; /* Old browsers */
+  background: -moz-linear-gradient(
+    left,
+    #000040 0%,
+    #000010 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    left,
+    #000040 0%,
+    #000010 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to right,
+    #000040 0%,
+    #000010 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000040', endColorstr='#000010',GradientType=1 ); /* IE6-9 */
+
   color: rgba(255, 255, 255, 0.8);
   box-shadow: inset 25px 0px 25px -25px rgba(194, 41, 149, 0.5),
     inset -25px 0px 25px -25px rgba(0, 0, 0, 0.5);
