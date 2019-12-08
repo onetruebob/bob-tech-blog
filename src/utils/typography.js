@@ -2,6 +2,18 @@ import Typography from "typography"
 import GithubTheme from "typography-theme-github"
 
 GithubTheme.overrideThemeStyles = ({ rhythm }) => ({
+  h1: {
+    borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
+    paddingBottom: `calc(${rhythm(1 / 4)} - 1px)`,
+    marginBottom: rhythm(3 / 4),
+    marginTop: rhythm(1.5),
+  },
+  h2: {
+    borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
+    paddingBottom: `calc(${rhythm(1 / 4)} - 1px)`,
+    marginBottom: rhythm(1 / 4),
+    marginTop: rhythm(1),
+  },
   blockquote: {
     borderLeft: "4px solid white",
     color: "white",

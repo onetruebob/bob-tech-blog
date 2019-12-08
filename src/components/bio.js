@@ -40,7 +40,12 @@ const Bio = () => {
     <div
       style={{
         display: `flex`,
-        marginBottom: rhythm(2.5),
+        marginBottom: rhythm(2),
+        backgroundColor: "rgba(255, 255, 255, 0.1)",
+        padding: "1.5em",
+        border: "1px solid rgba(255, 255, 255, 0.1)",
+        borderRadius: "2em",
+        boxShadow: "inset 0 0 25px rgba(0, 0, 0, 0.5)",
       }}
     >
       <Image
@@ -57,10 +62,9 @@ const Bio = () => {
           <span role="img" aria-label="waving hand emoji">
             👋
           </span>{" "}
-          Hi, I'm Bob. I'm a former User Experience designer turned Front-end
-          Software Engineer working{" "}
-          <a href="https://www.pindrop.com">@Pindrop</a> in Atlanta, GA. I love
-          building effective software user interfaces that people enjoy using.
+          Hi, I'm Bob. I'm a User Experience designer turned Front-end Software
+          Engineer working <a href="https://www.pindrop.com">@Pindrop</a> in
+          Atlanta, GA. I love building effective and delightful user interfaces.
         </p>
         <p style={{ marginBottom: 0 }}>
           You can also find me on{" "}
