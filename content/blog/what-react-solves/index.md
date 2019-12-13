@@ -65,35 +65,67 @@ From an HTML perspective, he's how we might statically render the component:
 And we would embed it in a page with this markup:
 ```html
 <html>
-    <div id="js-component-here" />
+	<head>
+		<style>
+			article {
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+	    <div id="js-component-here" />
+    </body>
 </html>
 ```
 
 Ok, let's programmatically build this component:
 ```JavaScript
-// This part makes sure the html document with the div we're attaching to already exisits
+// This part makes sure the html document with the div we're attaching to already exists
 window.addEventListener('DOMContentLoaded', () => {
     // 1. Create a variable that tracks the current state of our component.
-    const isSayingHello = true;
+    let isSayingHello = true;
     
     // 2. Locate the DOM node we want to attach our component to.
     const containerNode = document.querySelector('#js-component-here');
     
     // 3. Construct the new DOM nodes needed to render the component and organize them into a hierarchy.
-    const articleNode = document.createNode('article');
+    const articleNode = document.createElement('article');
+        
+    const pgNode = document.createElement('p');
+    const pgText = document.createTextNode(`My component says ${isSayingHello ? 'hello' : 'goodbye'}`);
+    const pgVariableTextHolder = document.createElement('span');
 
-    const pgNode = document.createNode('p');
-    const pgStaticText = document.createTextNode('My component says ');
-    const pgVariableTextHolder = document.createNode('span');
-    const pgVariableText = document.createTextNode(isSayingHello ? 'hello' : 'goodbye');
-    
-    const articleButton = document.createNode('button');
+    const articleButton = document.createElement('button');
     const buttonText = document.createTextNode(`Say ${isSayingHello ? 'Goodbye' : 'hello'}`);
     
-    pgVariableTextHolder.addChild(pgVariableText);
-    pgNode.addChild(pgStaticText);
-    pgNode.addChild(pgVariableTextHolder);
-    articleNode.addChild(pdNode);
+    pgNode.appendChild(pgText);
+    articleButton.appendChild(buttonText);
+    articleNode.appendChild(pgNode);
+    articleNode.appendChild(articleButton);
     
+    // 4. Create a function that changes the state those DOM nodes.
+    function toggleArticle() {
+    	// Clear out existing text
+    	pgNode.innerHTML = '';
+    	articleButton.innerHTML = '';
+
+    	// Flip component state
+    	isSayingHello = !isSayingHello;
+    	
+    	// Create and add new text
+    	const newPgText = document.createTextNode(`My component says ${isSayingHello ? 'hello' : 'goodbye'}`);
+    	const newButtonText = document.createTextNode(`Say ${isSayingHello ? 'Goodbye' : 'hello'}`);
+
+    	pgNode.appendChild(newPgText);
+    	articleButton.appendChild(newButtonText);
+    }
+    
+    // 5. Create an event handler on the button that invokes the function we just created when the DOM node is clicked.
+    articleButton.addEventListener('click', toggleArticle);
+    
+    // 6. Attach the newly created DOM nodes to the attachment DOM note.
+    containerNode.appendChild(articleNode);
 })
 ```
+
+You can [see this in action on CodePen](https://codepen.io/onetruebob/pen/mdyrObx)
