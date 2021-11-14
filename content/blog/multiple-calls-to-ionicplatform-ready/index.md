@@ -1,7 +1,7 @@
 ---
 title: Multiple Calls to $ionicPlatform.ready()
 date: "2015-07-12T20:01:00.000Z"
-description: "Creating a simple solution to an unexpected problem in Ionic"
+description: "Creating a simple solution to an unexpected problem in Ionic."
 ---
 
 I've recently been working in the Ionic framework for creating mobile apps. It's
@@ -41,10 +41,10 @@ provides a callback to the then of that promise. (I no longer trusted the
 service itself to return the promise correctly on multiple calls.)
 
 ```javascript
-angular.module("appName").factory("ionicReady", function($ionicPlatform) {
+angular.module("appName").factory("ionicReady", function ($ionicPlatform) {
   var readyPromise
 
-  return function() {
+  return function () {
     if (!readyPromise) {
       readyPromise = $ionicPlatform.ready()
     }
@@ -56,7 +56,7 @@ angular.module("appName").factory("ionicReady", function($ionicPlatform) {
 Then I replaced calls to the function with:
 
 ```javascript
-ionicReady().then(function() {
+ionicReady().then(function () {
   // Stuff to do when the platform is finally ready.
 })
 ```
