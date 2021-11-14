@@ -2,28 +2,18 @@
  * Bio component that queries for data
  * with Gatsby's useStaticQuery component
  *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
+ * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import React from "react"
+import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
-
-import { rhythm } from "../utils/typography"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
-      avatar: file(absolutePath: { regex: "/profile-pic.png/" }) {
-        childImageSharp {
-          fixed(width: 62, height: 62) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
       site {
         siteMetadata {
-          author
           social {
             twitter
             linkedin
@@ -35,12 +25,15 @@ const Bio = () => {
     }
   `)
 
-  const { author, social } = data.site.siteMetadata
+  // Set these values by editing "siteMetadata" in gatsby-config.js
+  const social = data.site.siteMetadata?.social
+
   return (
     <div
+      className="bio"
       style={{
         display: `flex`,
-        marginBottom: rhythm(2),
+        // marginBottom: rhythm(2),
         backgroundColor: "rgba(255, 255, 255, 0.1)",
         padding: "1.5em",
         border: "1px solid rgba(255, 255, 255, 0.1)",
@@ -48,16 +41,17 @@ const Bio = () => {
         boxShadow: "inset 0 0 25px rgba(0, 0, 0, 0.5)",
       }}
     >
-      <Image
-        fixed={data.avatar.childImageSharp.fixed}
-        alt={author}
-        style={{
-          marginRight: rhythm(1 / 2),
-          marginBottom: 0,
-          minWidth: 50,
-        }}
+      <StaticImage
+        className="bio-avatar"
+        layout="fixed"
+        formats={["auto", "webp", "avif"]}
+        src="../images/profile-pic.png"
+        width={75}
+        height={75}
+        quality={95}
+        alt="Profile picture"
       />
-      <div style={{ display: "flex-column" }}>
+      <div>
         <p>
           <span role="img" aria-label="waving hand emoji">
             👋
