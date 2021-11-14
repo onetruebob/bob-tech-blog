@@ -63,8 +63,10 @@ const Bio = () => {
             👋
           </span>{" "}
           Hi, I'm Bob. I'm a User Experience designer turned Front-end Software
-          Engineer working <a href="https://www.pindrop.com">@Pindrop</a> in
-          Atlanta, GA. I love building effective and delightful user interfaces.
+          Engineer working{" "}
+          <a href="https://www.forwardnetworks.com">@FwdNetworks</a> in Atlanta,
+          GA. I love building effective and delightful user interfaces for
+          organizations making a positive difference in the world.
         </p>
         <p style={{ marginBottom: 0 }}>
           You can also find me on{" "}
